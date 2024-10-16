@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title data-i18n="title">Advanced Crypto IA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Подключение библиотеки AOS для анимаций -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <!-- Подключение Swiper.js для слайдера -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!-- Подключение Font Awesome для иконок социальных сетей -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Подключение Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Плавный скроллинг -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="antialiased bg-gray-100 font-poppins" data-theme="light">
+    <!-- Переключатель дня/ночи -->
+    <div class="fixed top-4 right-4 z-50">
+        <button id="theme-toggle" class="p-2 bg-gray-200 rounded-full">
+            🌙
+        </button>
+    </div>
+
+    <!-- Навигация -->
+    <header class="fixed w-full bg-white shadow-md z-40">
+        <nav class="container mx-auto flex items-center justify-between py-4">
+            <div class="flex items-center space-x-2">
+                <img src="logo.png" alt="Logo" class="h-10"> <!-- Логотип -->
+                <span id="header-text" class="text-2xl font-bold" >Advanced Crypto IA</span> <!-- Этот текст будет меняться -->
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#home" class="hover:text-blue-500 transition duration-300 flex items-center"><i class="fas fa-home mr-2"></i><span data-i18n="nav.home">Home</span></a></li>
+                <li><a href="#services" class="hover:text-blue-500 transition duration-300 flex items-center"><i class="fas fa-concierge-bell mr-2"></i><span data-i18n="nav.services">>Servizi</span></a></li>
+                <li><a href="#market" class="hover:text-blue-500 transition duration-300 flex items-center"><i class="fas fa-chart-line mr-2"></i><span data-i18n="nav.market">Mercato</span></a></li>
+                <li><a href="#testimonials" class="hover:text-blue-500 transition duration-300 flex items-center"><i class="fas fa-comment-dots mr-2"></i><span data-i18n="nav.testimonials">Testimonianze</span></a></li>
+                <li><a href="#registration" class="hover:text-blue-500 transition duration-300 flex items-center"><i class="fas fa-user-plus mr-2"></i><span data-i18n="nav.registration">Registrazione</span></a></li>
+                <li><a href="#contact" class="hover:text-blue-500 transition duration-300 flex items-center"><i class="fas fa-envelope mr-2"></i><span data-i18n="nav.contact">Contatti</span></a></li>
+            </ul>
+            <div class="flex items-center space-x-4">
+                <!-- Переключатель языков -->
+                <select id="language-switcher" class="bg-white border border-gray-300 rounded-md p-2">
+                    <option value="it">IT</option>
+                    <option value="en">EN</option>
+                </select>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-3xl">&#9776;</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div id="mobile-menu" class="hidden bg-white shadow-md">
+        <ul class="flex flex-col space-y-4 p-4">
+            <li><a href="#home" class="hover:text-blue-500 transition duration-300 flex items-center"><i class="fas fa-home mr-2"></i><span data-i18n="nav.home">Главная</span></a></li>
+            <li><a href="#services" class="hover:text-blue-500 transition duration-300 flex items-center"><i class="fas fa-concierge-bell mr-2"></i><span data-i18n="nav.services">Услуги</span></a></li>
+            <li><a href="#market" class="hover:text-blue-500 transition duration-300 flex items-center"><i class="fas fa-chart-line mr-2"></i><span data-i18n="nav.market">Рынок</span></a></li>
+            <li><a href="#testimonials" class="hover:text-blue-500 transition duration-300 flex items-center"><i class="fas fa-comment-dots mr-2"></i><span data-i18n="nav.testimonials">Отзывы</span></a></li>
+            <li><a href="#registration" class="hover:text-blue-500 transition duration-300 flex items-center"><i class="fas fa-user-plus mr-2"></i><span data-i18n="nav.registration">Регистрация</span></a></li>
+            <li><a href="#contact" class="hover:text-blue-500 transition duration-300 flex items-center"><i class="fas fa-envelope mr-2"></i><span data-i18n="nav.contact">Контакты</span></a></li>
+        </ul>
+    </div>
+
+      <!-- Секция с слайдером -->
+      <section id="home" class="relative h-screen overflow-hidden">
+        <div class="swiper-container h-full">
+            <div class="swiper-wrapper">
+                <!-- Слайд 1 -->
+<!-- Слайд 1 -->
+<div class="swiper-slide relative">
+    <div class="rellax bg-cover bg-center absolute inset-0" data-rellax-speed="-5" style="background-image: url('slide1.jpg');"></div>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container mx-auto h-full flex items-center">
+        <div class="text-left text-white px-4 w-1/2" data-aos="fade-up">
+            <h1 class="text-5xl font-bold mb-4">Advanced Crypto IA ti permette di guadagnare in modo semplice</h1>
+            <p class="text-xl mb-8">Affidati al nostro sistema di Intelligenza Artificiale, ed inizia a vedere risultati sin da subito.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Слайд 2 -->
+<div class="swiper-slide relative">
+    <div class="rellax bg-cover bg-center absolute inset-0" data-rellax-speed="-5" style="background-image: url('slide2.jpg');"></div>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container mx-auto h-full flex items-center">
+        <div class="text-left text-white px-4 w-1/2" data-aos="fade-up">
+            <h1 class="text-5xl font-bold mb-4">I nostri clienti ad oggi grazie all’intelligenza artificiale del nostro sistema automatico , riescono ad avere risultati anche 1000 volte superiori rispetto alle classiche operazioni bancarie </h1>
+            <p class="text-xl mb-8">Scorri in basso e scegli il pacchetto migliore per te.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Форма регистрации -->
+<section id="registration" class="py-20 bg-white">
+    <div class="bg-white bg-opacity-75 p-4 rounded-lg w-1/3 absolute top-1/2 transform -translate-y-1/2 right-8 z-50">
+        <h2 class="text-2xl font-bold text-center mb-4" data-i18n="registration.title">Registrazione</h2>
+        <form id="registration-form" action="http://localhost/register.php" method="POST">
+            <div class="mb-2">
+                <label for="name" class="block text-gray-700 font-semibold mb-1" data-i18n="registration.form.name">Nome</label>
+                <input type="text" id="name" name="name" class="w-full p-2 border rounded-md" required>
+            </div>
+            <div class="mb-2">
+                <label for="surname" class="block text-gray-700 font-semibold mb-1" data-i18n="registration.form.surname">Cognome</label>
+                <input type="text" id="surname" name="surname" class="w-full p-2 border rounded-md" required>
+            </div>
+            <div class="mb-2">
+                <label for="birthyear" class="block text-gray-700 font-semibold mb-1" data-i18n="registration.form.birthyear">Anno di Nascita</label>
+                <input type="number" id="birthyear" name="birthyear" class="w-full p-2 border rounded-md" required min="1900" max="2024">
+            </div>
+            <div class="mb-2">
+                <label for="phone" class="block text-gray-700 font-semibold mb-1" data-i18n="registration.form.phone">Numero di Telefono</label>
+                <input type="tel" id="phone" name="phone" class="w-full p-2 border rounded-md" required value="+39">
+            </div>
+            <div class="mb-2">
+                <label for="email" class="block text-gray-700 font-semibold mb-1" data-i18n="registration.form.email">Email</label>
+                <input type="email" id="email" name="email" class="w-full p-2 border rounded-md" required>
+            </div>
+            <div class="mb-2">
+                <label for="email-confirm" class="block text-gray-700 font-semibold mb-1" data-i18n="registration.form.emailConfirm">Conferma Email</label>
+                <input type="email" id="email-confirm" name="email-confirm" class="w-full p-2 border rounded-md" required>
+            </div>
+            <div class="mb-2">
+                <label for="password" class="block text-gray-700 font-semibold mb-1" data-i18n="registration.form.password">Password</label>
+                <input type="password" id="password" name="password" class="w-full p-2 border rounded-md" required minlength="8" pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}">
+            </div>
+            <div class="mb-2">
+                <label for="password-confirm" class="block text-gray-700 font-semibold mb-1" data-i18n="registration.form.passwordConfirm">Conferma Password</label>
+                <input type="password" id="password-confirm" name="password-confirm" class="w-full p-2 border rounded-md" required minlength="8" pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}">
+            </div>
+            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition duration-300" data-i18n="registration.form.button">Register</button>
+        </form>
+    </div>
+</section>
+
+            <!-- Управление слайдером -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+<!-- Новый раздел после слайдера -->
+<section id="digital-markets" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <!-- Левый блок с изображением с анимацией AOS -->
+        <div class="w-full md:w-1/2 mb-6 md:mb-0" data-aos="fade-right">
+            <img src="about_onboarding.png" alt="Mercati digitali e Advanced Crypto IA" class="w-full h-auto transition-transform duration-500 hover:scale-105">
+        </div>
+        
+        <!-- Правый блок с текстом с анимацией AOS -->
+        <div class="w-full md:w-1/2 md:pl-12" data-aos="fade-left">
+            <h2 class="text-3xl font-bold mb-6">Mercati digitali e Advanced Crypto IA</h2>
+            <p class="text-gray-700 mb-4">
+                Il trading è cambiato molto nel corso degli anni. Ora, invece di parlare direttamente con i broker, le persone possono acquistare e vendere azioni o valute con pochi clic online. I grandi centri come il NASDAQ e la Borsa di New York sono i luoghi in cui viene scambiata la maggior parte delle azioni. Ma c’è anche il Forex trading, in cui si opera con le valute di diversi Paesi.
+            </p>
+            <p class="text-gray-700 mb-4">
+                Quando si negoziano azioni, si acquista un pezzo di una società. Nel Forex, si tratta piuttosto di scommettere sulla forza economica di un paese. Le criptovalute, come Bitcoin ed Ethereum, sono diventate di recente un grande affare nel trading. Sono diversi dal denaro normale e funzionano con un sistema chiamato blockchain.
+            </p>
+            <p class="text-gray-700 mb-4">
+                Advanced Crypto IA è una piattaforma progettata per aiutare le persone nel vasto mondo del trading online. Con Advanced Crypto IA, chiunque può avere accesso a strumenti che rendono il trading più semplice ed efficace. 
+            </p>
+            <p class="text-gray-700 mb-4">
+                Una delle caratteristiche più importanti di Advanced Crypto IA è il trading automatico basato sull’intelligenza artificiale. Questa tecnologia consente ai trader di automatizzare le loro strategie, assicurando che non perdano potenziali opportunità anche quando non stanno monitorando attivamente i mercati.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Новый раздел с анимацией появления -->
+<section id="who-can-profit" class="py-20 bg-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Chi Può Guadagnare?</h2>
+        <p class="text-gray-600 mb-10" data-aos="fade-up" data-aos-delay="100">Sviluppa sia finanziariamente che professionalmente con noi.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Первая карточка с анимацией появления -->
+            <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                <img src="path-to-image1.jpg" alt="Webmaster" class="w-full h-40 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-bold mb-2">Webmaster</h3>
+                <p class="text-gray-600">Se lavori con qualsiasi tipo di traffico a pagamento.</p>
+            </div>
+            
+            <!-- Вторая карточка с анимацией появления -->
+            <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                <img src="path-to-image2.jpg" alt="Influencer" class="w-full h-40 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-bold mb-2">Influencer</h3>
+                <p class="text-gray-600">Se sei un blogger di successo o stai iniziando la tua carriera nel blogging.</p>
+            </div>
+            
+            <!-- Третья карточка с анимацией появления -->
+            <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                <img src="path-to-image3.jpg" alt="Introducing Broker" class="w-full h-40 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-bold mb-2">Introducing Broker</h3>
+                <p class="text-gray-600">Se sei un esperto di trading che insegna ad altri online o offline.</p>
+            </div>
+        </div>
+
+         <!-- Кнопка с новым цветом и анимацией появления -->
+         <div class="mt-10" data-aos="fade-up" data-aos-delay="500">
+            <a href="#registration" class="bg-gray-900 text-white py-3 px-6 rounded-md hover:bg-gray-800 transition duration-300">
+                Voglio Guadagnare
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Секция услуг -->
+
+<section id="services" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-white mb-12" data-aos="fade-up">Cosa offriamo</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Basic -->
+            <div class="bg-gray-800 text-white p-6 rounded-lg shadow-lg" data-aos="fade-right">
+                <div class="mb-4 text-center">
+                    <!-- Иконка Basic -->
+                    <i class="fas fa-user fa-3x mx-auto" style="color: #ffffff;"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-2 text-center">Basic</h3>
+                <p class="text-gray-400 text-center">
+                    Conto da €250 ti da accesso al sistema di intelligenza artificiale ed in piu un Bonus di ingresso sin da subito per poter lavorare.
+                </p>
+            </div>
+            <!-- Silver -->
+            <div class="bg-gray-800 text-white p-6 rounded-lg shadow-lg" data-aos="fade-up">
+                <div class="mb-4 text-center">
+                    <!-- Иконка Silver -->
+                    <i class="fas fa-gem fa-3x mx-auto" style="color: #C0C0C0;"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-2 text-center">Silver</h3>
+                <p class="text-gray-400 text-center">
+                    Conto da €500 con accesso ai nostri sistemi ed in piu un consulente dedicato ed accesso illimitato ai mercati.
+                </p>
+            </div>
+            <!-- Gold -->
+            <div class="bg-gray-800 text-white p-6 rounded-lg shadow-lg" data-aos="fade-left">
+                <div class="mb-4 text-center">
+                    <!-- Иконка Gold -->
+                    <i class="fas fa-crown fa-3x mx-auto" style="color: #FFD700;"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-2 text-center">Gold</h3>
+                <p class="text-gray-400 text-center">
+                    Conto da €1000 con accesso ai nostri sistemi, consulente dedicato, bonus del 100%.
+                </p>
+            </div>
+        </div>
+        <!-- Кнопка по центру блока -->
+        <div class="mt-10 flex justify-center" data-aos="fade-up" data-aos-delay="500">
+            <a href="#registration" class="bg-gray-900 text-white py-3 px-6 rounded-md hover:bg-gray-800 transition duration-300">
+                Voglio Guadagnare
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Секция рыночных котировок -->
+<section id="market" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Quote di mercato</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Биткоин -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg" data-aos="fade-up">
+                <h3 class="text-2xl font-semibold mb-4">Bitcoin</h3>
+                <div id="bitcoin-list" class="space-y-2">
+                    <!-- Данные будут загружены динамически -->
+                </div>
+                <canvas id="bitcoin-chart" class="mt-4"></canvas>
+            </div>
+            <!-- S&P 500 -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-2xl font-semibold mb-4">S&P 500</h3>
+                <div id="sp500-list" class="space-y-2">
+                    <!-- Данные будут загружены динамически -->
+                </div>
+                <canvas id="sp500-chart" class="mt-4"></canvas>
+            </div>
+            <!-- Золото -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-2xl font-semibold mb-4">Gold</h3>
+                <div id="gold-list" class="space-y-2">
+                    <!-- Данные будут загружены динамически -->
+                </div>
+                <canvas id="gold-chart" class="mt-4"></canvas>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Подключение Chart.js перед закрывающим тегом body -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+ <!-- Client Profiles -->
+ <section id="profiles" class="py-10 bg-gray-100" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Client Profiles</h2>
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Профиль 1: Giovanni Rossi с инвестициями в Bitcoin -->
+        <div class="bg-gray-900 text-white p-6 rounded-lg shadow-lg" data-aos="fade-right" data-aos-duration="1000">
+            <div class="flex items-center mb-4">
+                <img src="avatar1.jpg" alt="Giovanni Rossi" class="w-12 h-12 rounded-full mr-4">
+                <div>
+                    <h4 class="text-xl font-semibold">@giovanni</h4>
+                    <p class="text-gray-400">Giovanni Rossi</p>
+                </div>
+            </div>
+            <p class="text-green-400 text-2xl font-bold mb-4">Profitto attuale: <span id="giovanni-profit">€0</span></p>
+            <p class="text-gray-400 text-sm">Investimento iniziale: €150,000</p>
+            <p class="text-gray-400 text-sm">Giorni sulla piattaforma: <span id="giovanni-days">73</span></p>
+            <hr class="my-4 border-gray-600">
+            <p class="text-gray-300 text-sm">Attivo: Bitcoin</p>
+        </div>
+
+        <!-- Профиль 2: Anna Bianchi с инвестициями в S&P 500 -->
+        <div class="bg-gray-900 text-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <div class="flex items-center mb-4">
+                <img src="avatar2.jpg" alt="Anna Bianchi" class="w-12 h-12 rounded-full mr-4">
+                <div>
+                    <h4 class="text-xl font-semibold">@anna_b</h4>
+                    <p class="text-gray-400">Anna Bianchi</p>
+                </div>
+            </div>
+            <p class="text-green-400 text-2xl font-bold mb-4">Profitto attuale: <span id="anna_b-profit">€0</span></p>
+            <p class="text-gray-400 text-sm">Investimento iniziale: €200,000</p>
+            <p class="text-gray-400 text-sm">Giorni sulla piattaforma: <span id="anna_b-days">56</span></p>
+            <hr class="my-4 border-gray-600">
+            <p class="text-gray-300 text-sm">Attivo: S&P 500</p>
+        </div>
+
+        <!-- Профиль 3: Eleonora Grimaldi с инвестициями в золото -->
+        <div class="bg-gray-900 text-white p-6 rounded-lg shadow-lg" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <div class="flex items-center mb-4">
+                <img src="avatar3.jpg" alt="Eleonora Grimaldi" class="w-12 h-12 rounded-full mr-4">
+                <div>
+                    <h4 class="text-xl font-semibold">@ele_grima</h4>
+                    <p class="text-gray-400">Eleonora Grimaldi</p>
+                </div>
+            </div>
+            <p class="text-green-400 text-2xl font-bold mb-4">Profitto attuale: <span id="ele_grima-profit">€0</span></p>
+            <p class="text-gray-400 text-sm">Investimento iniziale: €125,000</p>
+            <p class="text-gray-400 text-sm">Giorni sulla piattaforma: <span id="ele_grima-days">96</span></p>
+            <hr class="my-4 border-gray-600">
+            <p class="text-gray-300 text-sm">Attivo: Gold</p>
+        </div>
+    </div>
+</section>
+
+      
+
+    <!-- Секция отзывов -->
+    <section id="testimonials" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12" data-i18n="testimonials.title">Отзывы наших клиентов</h2>
+            <div class="swiper testimonial-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Отзыв 1 -->
+                    <div class="swiper-slide flex justify-center">
+                        <div class="max-w-md bg-white rounded-lg shadow-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <img src="client1.jpg" alt="Клиент 1" class="w-16 h-16 rounded-full mr-4">
+                                <div>
+                                    <h4 class="text-lg font-semibold" data-i18n="testimonials.testimonial1.name">Иван Иванов</h4>
+                                    <p class="text-gray-600" data-i18n="testimonials.testimonial1.position">Генеральный директор</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700" data-i18n="testimonials.testimonial1.text">"Замечательная компания! Помогли развить наш бизнес."</p>
+                        </div>
+                    </div>
+                    <!-- Отзыв 2 -->
+                    <div class="swiper-slide flex justify-center">
+                        <div class="max-w-md bg-white rounded-lg shadow-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <img src="client2.jpg" alt="Клиент 2" class="w-16 h-16 rounded-full mr-4">
+                                <div>
+                                    <h4 class="text-lg font-semibold" data-i18n="testimonials.testimonial2.name">Мария Смирнова</h4>
+                                    <p class="text-gray-600" data-i18n="testimonials.testimonial2.position">Маркетолог</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700" data-i18n="testimonials.testimonial2.text">"Профессиональный подход и отличные результаты."</p>
+                        </div>
+                    </div>
+                    <!-- Отзыв 3 -->
+                    <div class="swiper-slide flex justify-center">
+                        <div class="max-w-md bg-white rounded-lg shadow-lg p-6">
+                            <div class="flex items-center mb-4">
+                                <img src="client3.jpg" alt="Клиент 3" class="w-16 h-16 rounded-full mr-4">
+                                <div>
+                                    <h4 class="text-lg font-semibold" data-i18n="testimonials.testimonial3.name">Алексей Петров</h4>
+                                    <p class="text-gray-600" data-i18n="testimonials.testimonial3.position">Менеджер проектов</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700" data-i18n="testimonials.testimonial3.text">"Отличное обслуживание и поддержка на каждом этапе."</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Навигация Swiper -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма регистрации -->
+    <!-- <section id="registration" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up" data-i18n="registration.title">Регистрация</h2>
+            <div class="max-w-lg mx-auto bg-gray-100 rounded-lg shadow-lg p-8" data-aos="fade-up">
+                <form id="registration-form">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-semibold mb-2" data-i18n="registration.form.name">Имя</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 border rounded-md" required data-i18n-placeholder="registration.form.name">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-semibold mb-2" data-i18n="registration.form.email">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 border rounded-md" required data-i18n-placeholder="registration.form.email">
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="block text-gray-700 font-semibold mb-2" data-i18n="registration.form.password">Пароль</label>
+                        <input type="password" id="password" name="password" class="w-full p-3 border rounded-md" required data-i18n-placeholder="registration.form.password">
+                    </div>
+                    <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md transition duration-300" data-i18n="registration.form.button">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </section> -->
+
+<!-- Футер -->
+<footer id="contact" class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <!-- Flex контейнер для выравнивания всех элементов в одну строку -->
+        <div class="flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left space-y-6 md:space-y-0" data-aos="fade-up">
+            <!-- Логотип и название компании -->
+            <div class="flex items-center space-x-3">
+                <img src="logo.png" alt="Advanced Crypto IA Logo" class="h-12"> <!-- Логотип -->
+                <h2 class="text-xl font-bold">Advanced Crypto IA</h2>
+            </div>
+
+            <!-- Иконки социальных сетей -->
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-blue-400 transition duration-300">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+            </div>
+            <div class="mt-8 text-center">
+                <div class="mb-4">
+                    <h2 class="text-2xl font-bold mb-2" data-i18n="contact.title">Contattaci</h2>
+                    <p>Email: advanced@cryptoia.com</p>
+                    <p data-i18n="contact.phone">Telefono: +39 (123) 456-7890</p>
+                </div>
+                <!-- Копирайт -->
+                <div class="text-sm">
+                    &copy; 2024 Advanced Crypto IA. All rights reserved.
+                </div>
+            </div>
+        </div>  
+        <!-- AVVISO -->
+        <div class="mt-8 text-center text-sm text-gray-400">
+            <p><strong>AVVISO</strong></p>
+            <p>Le informazioni e gli strumenti di Advanced Crypto IA, Advanced Crypto IA e Advanced Crypto IA sono solo a scopo informativo e non costituiscono consulenza finanziaria o di investimento.</p>
+            <p>Il trading comporta dei rischi, tra cui la potenziale perdita di capitale. Prima di prendere decisioni di trading, consultate sempre un consulente finanziario autorizzato.</p>
+            <p>Advanced Crypto IA Intal e le sue piattaforme associate non garantiscono l’accuratezza delle loro informazioni. Tutte le decisioni commerciali basate sulle nostre informazioni sono esclusivamente responsabilità dell’utente.</p>
+        </div>    
+    </div>
+</footer>
+
+
+    <!-- Подключение скриптов -->
+    <!-- Rellax.js для параллакса -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+    <!-- AOS для анимаций -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper.js для слайдера -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- i18next для мультиязычности -->
+    <script src="https://unpkg.com/i18next@21.6.14/dist/umd/i18next.min.js"></script>
+    <!-- Ваш скрипт -->
+    <script src="script.js"></script>
+</body>
+</html>

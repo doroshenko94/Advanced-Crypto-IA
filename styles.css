@@ -1,0 +1,312 @@
+/* Общие стили */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Улучшенная плавность анимации */
+.rellax {
+    transition: transform 0.6s ease-out; /* Плавная анимация для всех движений */
+}
+
+/* Плавность для всех анимаций в Swiper */
+.swiper-slide {
+    transition: transform 1s ease-in-out;
+}
+
+
+/* Hover-анимации и микровзаимодействия */
+.hover-rotate {
+    transition: transform 0.3s ease;
+}
+
+.hover-rotate:hover {
+    transform: rotate(360deg);
+}
+
+/* Переключатель дня/ночи */
+[data-theme="dark"] {
+    background-color: #1a202c;
+    color: #cbd5e0;
+}
+
+[data-theme="dark"] header {
+    background-color: #2d3748;
+}
+
+[data-theme="dark"] .bg-white {
+    background-color: #2d3748;
+}
+
+[data-theme="dark"] .text-gray-700 {
+    color: #cbd5e0;
+}
+
+[data-theme="dark"] .text-gray-600 {
+    color: #a0aec0;
+}
+
+[data-theme="dark"] .bg-gray-100 {
+    background-color: #2d3748;
+}
+
+[data-theme="dark"] .bg-blue-900 {
+    background-color: #2a4365;
+}
+
+[data-theme="dark"] .bg-gray-200 {
+    background-color: #4a5568;
+}
+
+[data-theme="dark"] .border-gray-300 {
+    border-color: #4a5568;
+}
+
+[data-theme="dark"] .bg-blue-500 {
+    background-color: #3182ce;
+}
+
+[data-theme="dark"] .hover\:bg-blue-700:hover {
+    background-color: #2b6cb0;
+}
+
+/* Стили для слайдера отзывов */
+.testimonial-swiper .swiper-pagination-bullet {
+    background: #3182ce;
+}
+
+.testimonial-swiper .swiper-button-next,
+.testimonial-swiper .swiper-button-prev {
+    color: #3182ce;
+}
+
+/* Стили для Swiper.js */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стили для секции услуг */
+#services {
+    background-color: #f3f4f6;
+}
+
+#services .bg-gray-800 {
+    background-color: #111827;
+}
+
+#services h2 {
+    color: #000000;
+}
+
+#services p {
+    color: #a0aec0;
+}
+
+#services i {
+    color: #3182ce;
+}
+
+#services .rounded-lg {
+    border-radius: 0.5rem;
+}
+
+#services .shadow-lg {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#services .text-center {
+    text-align: center;
+}
+
+#home .swiper-container {
+    position: relative;
+}
+
+
+/* Smartphones (portrait and landscape) */
+@media (max-width: 576px) {
+    header nav {
+        padding: 0 1rem;
+    }
+
+    .text-5xl {
+        font-size: 2.5rem;
+    }
+
+    .text-4xl {
+        font-size: 2rem;
+    }
+
+    .swiper-container {
+        height: 50vh;
+    }
+
+ /* На смартфонах сделаем форму регистрации шире, чтобы она выглядела пропорционально */
+#home .bg-white.bg-opacity-75 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Установим 100% ширины */
+    max-width: 320px; /* Максимальная ширина для мобильных устройств */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+    #services .grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-swiper .swiper-slide {
+        width: 100%; /* Один отзыв на экране */
+    }
+
+    .testimonial-swiper .swiper-slide {
+        opacity: 1; /* Обеспечим видимость всех отзывов */
+    }
+
+
+    #services .rounded-lg {
+        border-radius: 0.5rem;
+    }
+
+    #profiles .grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+    .fixed.top-4.right-4.z-50 {
+        position: absolute;
+        top: 20px;
+        right: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px; /* Между переключателем языка и темы */
+        z-index: 100; /* Убедимся, что они сверху других элементов */
+    }
+   /* Переключатель темы */
+   #theme-toggle {
+    width: 40px;
+    height: 40px;
+    z-index: 101;
+}
+
+/* Переключатель языка */
+#language-switcher {
+    position: absolute;
+    width: 60px;
+    z-index: 101;
+    right: 120px;
+}
+
+    /* Бургер-меню */
+    #menu-btn {
+        position: absolute;
+        top: 20px;
+        left: 5px;
+        z-index: 100; /* Убедимся, что оно всегда на переднем плане */
+    }
+}
+
+/* Tablets (portrait) */
+@media (min-width: 577px) and (max-width: 768px) {
+    header nav {
+        padding: 0 1rem;
+    }
+
+    .text-5xl {
+        font-size: 3rem;
+    }
+
+    .text-4xl {
+        font-size: 2.5rem;
+    }
+
+    .swiper-container {
+        height: 60vh;
+    }
+
+    #home .bg-white.bg-opacity-75 {
+        width: 80%;
+        left: 10%;
+    }
+
+    #services .grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial-swiper .swiper-slide {
+        opacity: 1;
+    }
+
+    #services .rounded-lg {
+        border-radius: 0.5rem;
+    }
+
+    #profiles .grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktops */
+@media (min-width: 769px) {
+    .swiper-container {
+        height: 100vh;
+    }
+
+    #services .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #profiles .grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #home .bg-white.bg-opacity-75 {
+        position: absolute;
+        top: 50%;
+        left: 75%; /* Сместим форму влево на 5% */
+        transform: translate(-45%, -50%); /* Поддержим центрирование с новым смещением */
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Уменьшаем ширину формы */
+#registration-form {
+    width: 100%;
+    max-width: 300px; /* Максимальная ширина формы */
+    margin: 0 auto; /* Центрируем форму */
+}
+
+/* Уменьшаем отступы между полями и текст */
+#registration-form input {
+    padding: 8px; /* Уменьшаем отступы внутри полей */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+}
+
+#registration-form label {
+    font-size: 14px; /* Уменьшаем размер шрифта для лейблов */
+}
+
+/* Уменьшаем размер кнопки */
+#registration-form button {
+    padding: 10px;
+    font-size: 14px;
+    max-width: 100px;
+    margin: 0 auto;
+}
