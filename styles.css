@@ -163,11 +163,18 @@ a {
     }
 
     .text-4xl {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .swiper-container {
         height: 50vh;
+    }
+    .swiper-slide h1 {
+        font-size: 1.5rem; /* Уменьшаем размер заголовков на мобильных */
+    }
+
+    .swiper-slide p {
+        font-size: 1rem; /* Уменьшаем размер текста параграфов на мобильных */
     }
 
  /* На смартфонах сделаем форму регистрации шире, чтобы она выглядела пропорционально */
@@ -222,7 +229,7 @@ a {
     position: absolute;
     width: 60px;
     z-index: 101;
-    right: 120px;
+    right: 190px;
 }
 
     /* Бургер-меню */
