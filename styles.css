@@ -4,9 +4,21 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    /* Добавьте другие переменные */
+}
+
+[data-theme="dark"] {
+    --background-color: #1a202c;
+    --text-color: #cbd5e0;
+    /* Добавьте другие переменные для темной темы */
+}
+
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 a {
@@ -310,3 +322,54 @@ a {
     max-width: 100px;
     margin: 0 auto;
 }
+
+button:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+#rating-section {
+    background-color: #f9fafb; /* Светло-серый фон */
+}
+
+#rating-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rating-section .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rating-section .text-blue-500 {
+    color: #3182ce;
+}
+
+#rating-section img {
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+#rating-section img:hover {
+    transform: scale(1.1); /* Легкое увеличение логотипов при наведении */
+}
+
+/* Золотой цвет для звёзд */
+#rating-section .flex span {
+    color: #3b82f6; /* Золотой цвет */
+    font-size: 28px; /* Размер звёзд */
+}
+#rating-section img {
+    height: 100px; /* Увеличиваем высоту изображения */
+    width: auto;  /* Сохраняем пропорции */
+    transition: transform 0.3s ease; /* Плавный переход */
+    padding: 18px;
+}
+
+#rating-section img:hover {
+    transform: scale(1.2); /* Увеличение изображения при наведении */
+}
+
